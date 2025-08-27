@@ -1,0 +1,14 @@
+<?php
+require 'config.php'; // Connexion PDO
+
+$nom = 'RAVAOARISOA';
+$prenoms = 'Fara';
+$email = 'dimbifara.rajaonah@gmail.com';
+$password = '07Mars2000@'; // Tu peux changer
+$hash = password_hash($password, PASSWORD_DEFAULT);
+$role = 'admin'; // Utilisateur normal = 'user'
+
+$stmt = $pdo->prepare("INSERT INTO utilisateurs (nom, Prenoms, email, password, role) VALUES (?, ?, ?, ?, ?)");
+$stmt->execute([$nom, $prenoms, $email, $hash, $role]);
+
+echo "Administrateur ajouté avec succès.";

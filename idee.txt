@@ -1,0 +1,9 @@
+Créer une application web où un utilisateur peut :
+
+    s'inscrire / se connecter
+
+    ajouter, modifier, supprimer des tâches
+
+    marquer des tâches comme terminées
+
+    voir uniquement ses propres tâches
