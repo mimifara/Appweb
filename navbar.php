@@ -33,7 +33,7 @@ $isAdmin = ($user['role'] === 'admin');
     </li>
 
     <li>
-      <a href="dashboard.php">
+      <a href="<?= $isAdmin ? 'dashboard.php' : 'dashboard_user.php' ?>">
         <i class='bx bx-grid-alt'></i>
         <span class="links_name">Tableau de bord</span>
       </a>
