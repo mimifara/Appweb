@@ -26,7 +26,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($user && password_verify($password, $user['password'])) {
             // Connexion réussie
             $_SESSION['user_id'] = $user['id'];
-            header('Location: dashboard.php'); // Redirection après connexion
+            if (($user['role'] ?? '') === 'admin') {
+                header('Location: dashboard.php');
+            } else {
+                header('Location: dashboard_user.php');
+            }
             exit;
         } else {
             $errors[] = "Email ou mot de passe incorrect";

@@ -6,6 +6,7 @@ $stmt = $pdo->prepare("SELECT * FROM utilisateurs WHERE id = ?");
 $stmt->execute([$_SESSION['user_id']]);
 $user = $stmt->fetch();
 $isAdmin = ($user['role'] === 'admin');
+$dashboardLink = $isAdmin ? 'dashboard.php' : 'dashboard_user.php';
 ?>
 <!DOCTYPE html>
 <!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
@@ -33,7 +34,7 @@ $isAdmin = ($user['role'] === 'admin');
     </li>
 
     <li>
-      <a href="dashboard.php">
+      <a href="<?= $dashboardLink ?>">
         <i class='bx bx-grid-alt'></i>
         <span class="links_name">Tableau de bord</span>
       </a>
