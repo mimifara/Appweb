@@ -81,6 +81,10 @@ try {
             <div class="box-topic">Tâches à faire</div>
             <div class="number"><?php echo (int)$taskTotals['a_faire']; ?></div>
           </div>
+          <div class="right-side">
+            <div class="box-topic">Tâches à faire</div>
+            <div class="number"><?php echo (int)$taskTotals['a_faire']; ?></div>
+          </div>
           <i class='bx bx-list-check pin'></i>
         </div>
       </div>

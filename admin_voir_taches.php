@@ -21,6 +21,16 @@ if (!isset($_SESSION['user_id'])) {
   <section class="home-section">
     <div class="text">Bienvenue sur la liste des tâches</div>
   </section>
-
+  <section class="home-section">
+    <h1>Liste des tâches :</h1>
+  </section>
+  <section class="home-section">
+    <table>
+      <tr>
+        <th>Nom de la tâche</th>
+        <th>Description</th>
+      </tr>
+    </table>
+  </section>
 </body>
 </html>
